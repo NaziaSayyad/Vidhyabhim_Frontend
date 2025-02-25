@@ -1,0 +1,103 @@
+ #certificate {
+      border: 20px solid brown;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      max-width: 800px;
+      padding: 4%;
+      margin: auto;
+      position: relative;
+  }
+  .enroll_no_p {
+      text-decoration: underline;
+      font-weight: bold;
+  }
+  #input_box {
+      padding: 20px;
+      margin: auto;
+      text-align: center;
+  }
+  #st_name_div, #courseName_related_div {
+      display: flex;
+      font-size: 15px;
+      gap: 5px;
+      margin-left: 5%;
+  }
+  #name {
+      font-weight: bold;
+      text-decoration: underline;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 20px;
+  }
+  #enroll {
+      display: flex;
+      text-decoration: dotted;
+  }
+  input {
+      width: 90%;
+      max-width: 280px;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #3498db;
+      border-radius: 8px;
+      outline: none;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  input:focus {
+      border-color: #2ecc71;
+      box-shadow: 0 0 10px rgba(46, 204, 113, 0.6);
+  }
+  button {
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      margin-left: 5%;
+  }
+  button:hover {
+      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+      transform: scale(1.05);
+  }
+  button:active {
+      transform: scale(0.98);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .box1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 4%;
+      margin-left: 2%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+  }
+  @media (min-width: 768px) {
+      .box1 {
+          grid-template-columns: 1fr 1fr;
+      }
+  }
+  #Course_P {
+      font-family: "Arial Black", sans-serif;
+      font-size: 30px;
+      text-transform: uppercase;
+      text-align: center;
+      background: linear-gradient(45deg, #ff5100, #ff7300, #00ff37, #00dbf8, #0000ff, #4b0082, #8a2be2);
+      /* -webkit-background-clip: text; */
+      -webkit-text-fill-color: transparent;
+      text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6), 6px 6px 5px rgba(0, 0, 0, 0.3);
+      letter-spacing: 2px;
+      word-spacing: 4px;
+  }
+  @media (min-width: 768px) {
+      #Course_P {
+          font-size: 40px;
+      }
+  }
