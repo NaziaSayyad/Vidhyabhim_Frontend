@@ -1,53 +1,66 @@
 import { useState, useEffect } from "react";
-import { Card, Container, Title } from "@mantine/core";
+import { Box, Card, Container, Flex, Title } from "@mantine/core";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import axios from "axios"; // Import Axios for API calls
 
-// Initial sample data
-const initialData = [
-  { time: "00:00", value: 200 },
-  { time: "00:10", value: 250 },
-  { time: "00:20", value: 230 },
-  { time: "00:30", value: 300 },
-  { time: "00:40", value: 280 },
-];
+function StudentChart() {
+    const [data, setData] = useState([]);
+    const fetchData = async () => {
+        try {
+            const response = await axios.get("https://vidhyabhim-backend.onrender.com/students"); // Replace with your API URL
+            const studentCount = response.data.length; // Assuming API returns { count: 120 }
+            console.log(studentCount);
 
-function RealTimeChart() {
-  const [data, setData] = useState(initialData);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const newTime = new Date().toLocaleTimeString().slice(3, 8); // Get HH:MM format
+        } catch (error) {
+            console.error("Error fetching student data:", error);
+        }
+    };
 
-      const newValue = Math.floor(Math.random() * (500 - 100 + 1)) + 100; // Random value between 100-500
+    useEffect(() => {
 
-      setData((prevData) => {
-        const updatedData = [...prevData, { time: newTime, value: newValue }];
-        return updatedData.length > 10 ? updatedData.slice(1) : updatedData; // Keep only last 10 data points
-      });
-    }, 2000); // Update every 2 seconds
+        fetchData(); // Fetch immediately
+        // const interval = setInterval(fetchData, 5000); // Fetch every 5 seconds
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
+        // return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
 
-  return (
-    <Container size="lg">
-      <Title align="center" order={2} mt="md">
-        Real-Time Data Chart
-      </Title>
+    return (
+        <Container size="lg">
+            <Box
+                display='flex'
+                justify="center"
+                // align="center" 
+                gap='15%' >
+                <Box style={{ background: 'lightblue', padding: '10px' }}>
+                    <Title align="center" order={2} mt="md">
+                        Total Students
+                    </Title>
+                </Box>
+                <Box style={{ background: 'lightgreen', padding: '10px' }}>
+                    <Title align="center" order={2} mt="md">
+                        Total Batches
+                    </Title>
 
-      <Card shadow="sm" p="lg" mt="xl">
-        <ResponsiveContainer width="100%" height={300}>
-          <LineChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="time" />
-            <YAxis />
-            <Tooltip />
-            <Line type="monotone" dataKey="value" stroke="#1d4ed8" strokeWidth={3} />
-          </LineChart>
-        </ResponsiveContainer>
-      </Card>
-    </Container>
-  );
+                </Box>
+                <Box style={{ background: 'lightcoral', padding: '10px' }}>
+                    <Title align="center" order={2} mt="md">
+                        Total Courses
+                    </Title>
+                </Box>
+                <Box style={{ background: 'lightgreen', padding: '10px' }}>
+
+                    <Title align="center" order={2} mt="md">
+                        Total Subjects
+                    </Title>
+                </Box>
+
+            </Box>
+
+
+
+        </Container>
+    );
 }
 
-export default RealTimeChart;
+export default StudentChart;
