@@ -14,6 +14,7 @@ console.log(st,"data")
         <>
         <div> 
             <h1> Students page </h1>
+            
         </div>
         </>
     )

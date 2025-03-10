@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import "./Addstudent.css";
 import { addStudent } from "../Redux/Student/actions";
 
 const AddStudent = () => {
@@ -8,7 +8,6 @@ const AddStudent = () => {
     console.log(data,"Finaldata");
     
     const dispatch = useDispatch();
-
     const [formData, setFormData] = useState({
         email: "",
         phone: "",
@@ -45,20 +44,17 @@ const AddStudent = () => {
         doc3: null,
         doc4: null
     });
-
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
     const handleFileChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.files[0] });
     };
-
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(addStudent(formData));
-
     };
+    
     useEffect(() =>{
         console.log(formData);
         
@@ -91,9 +87,6 @@ const AddStudent = () => {
             <input type="text" name= "other2"placeholder  ="other2" onChange={handleChange}   />
             <input type="text" name="BatchName" placeholder="BatchName" onChange={handleChange}   />
             <input type="text" name="BatchTime" placeholder="BatchTime" onChange={handleChange}   />
-           
-           
-           
             <input type="file" name="photo" onChange={handleFileChange} />
             <input type="file" name="sign" onChange={handleFileChange} />
             <input type="file" name="doc1" onChange={handleFileChange} />
