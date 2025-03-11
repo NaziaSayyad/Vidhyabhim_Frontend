@@ -14,8 +14,8 @@ function App() {
   return (
         <>
         <div style={{display : 'flex'}}>
-    <Sidebar />
-    <AllRoutes /> 
+     <Sidebar />
+      <AllRoutes /> 
         </div>
       
      </>

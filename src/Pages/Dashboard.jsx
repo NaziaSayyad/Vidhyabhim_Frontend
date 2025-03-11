@@ -1,14 +1,20 @@
-import { Box, Button, Container, Flex, Text } from "@mantine/core"
-import StudentChart from "../Components/StudentData"
-import { Sidebar } from "../Components/Sidebar"
+import MapComponent from "../Components/MapComponent"
+import CustomCalendar from "../Components/Calender"
+import SalesChart from "../Components/Sales"
+import "./dasboard.css";
+import StudentChart from "../Components/StudentData";
 
 export const Dashboard = () =>{
     return(
         <>
-       <Container>
-            <StudentChart />
        
-       </Container>
+       <div className="dashboard-container">
+      <div className="dashboard-grid">
+        <SalesChart />
+        <CustomCalendar />
+        <MapComponent />
+      </div>
+    </div>
         </>
     )
 }
