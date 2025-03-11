@@ -29,26 +29,26 @@ function StudentChart() {
         <Container size="lg">
             <Box
                 display='flex'
-                justify="center"
-                // align="center" 
+                // justify="center"
+                // align="center"
                 gap='15%' >
-                <Box style={{ background: 'lightblue', padding: '10px' }}>
+                <Box style={{ background: 'lightblue', padding: '10px', margin :'2%',}}>
                     <Title align="center" order={2} mt="md">
                         Total Students
                     </Title>
                 </Box>
-                <Box style={{ background: 'lightgreen', padding: '10px' }}>
+                <Box style={{ background: 'lightgreen', padding: '10px', margin :'2%' }}>
                     <Title align="center" order={2} mt="md">
                         Total Batches
                     </Title>
 
                 </Box>
-                <Box style={{ background: 'lightcoral', padding: '10px' }}>
+                <Box style={{ background: 'lightcoral', padding: '10px', margin :'2%' }}>
                     <Title align="center" order={2} mt="md">
                         Total Courses
                     </Title>
                 </Box>
-                <Box style={{ background: 'lightgreen', padding: '10px' }}>
+                <Box style={{ background: 'lightgreen', padding: '10px', margin :'2%' }}>
 
                     <Title align="center" order={2} mt="md">
                         Total Subjects

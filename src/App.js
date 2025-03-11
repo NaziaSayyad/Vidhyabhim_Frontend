@@ -7,21 +7,17 @@ import { MarksheetPage } from './Pages/Marksheet';
 import AddStudent from './Pages/AddStudent';
 import { NewStudent } from './Pages/NewStudent';
 import { Dashboard } from './Pages/Dashboard';
+import { Sidebar } from './Components/Sidebar';
+import { AllRoutes } from './AllRoutes/AllRoutes';
 
 function App() {
   return (
         <>
-        
-      <Routes>
-        <Route path='/' element={<Dashboard />}/>
-        <Route path='/newstudent' element= {<NewStudent />}/>
-        <Route path='/allstudent' element = {<Student />}/>
-
-        <Route path='/addstudent' element ={<AddStudent />}/>
-        <Route path='/marksheetdata' element={<MarksheetPage />} />
-        <Route path="/marksheet" element={<MarksheetData />} />
-        <Route path="/certificate" element={<CertificateInput />} />
-      </Routes>
+        <div style={{display : 'flex'}}>
+    <Sidebar />
+    <AllRoutes /> 
+        </div>
+      
      </>
        
     )

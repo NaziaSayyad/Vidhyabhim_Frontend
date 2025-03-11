@@ -1,0 +1,89 @@
+/* Sidebar container */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: black;
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Sidebar header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Sidebar menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main menu buttons */
+.menu-button {
+  width: 100%;
+  background: none;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+}
+
+.menu-button:hover {
+  background: #333;
+}
+
+/* Arrow animation */
+.arrow {
+  transition: transform 0.2s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* Submenu items */
+.submenu {
+  padding-left: 15px;
+}
+
+/* Make submenu links look like buttons */
+.submenu-button {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    background: none;
+    color: #bbb;
+    border: none;
+    text-align: left;
+    padding: 8px 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .submenu-button:hover {
+    color: white;
+    background: #444;
+  }
+  
+/* Responsive (collapses on small screens) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+}
