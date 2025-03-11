@@ -9,15 +9,19 @@ import { NewStudent } from './Pages/NewStudent';
 import { Dashboard } from './Pages/Dashboard';
 import { Sidebar } from './Components/Sidebar';
 import { AllRoutes } from './AllRoutes/AllRoutes';
+import Navbar from './Pages/Navbar';
 
 function App() {
   return (
         <>
+        <div> <Navbar /> </div>
+    
         <div style={{display : 'flex'}}>
-     <Sidebar />
-      <AllRoutes /> 
-        </div>
-      
+       <div>  <Sidebar /> </div>
+      <div>  <AllRoutes />  </div>
+     
+     </div>
+    
      </>
        
     )

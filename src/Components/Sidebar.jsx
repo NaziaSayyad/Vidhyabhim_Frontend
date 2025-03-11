@@ -1,7 +1,8 @@
 import { Box, NavLink, ScrollArea } from "@mantine/core";
 import "./sidebar.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
+import Navbar from "../Pages/Navbar";
 
 const menuItems = [
     {
@@ -49,8 +50,11 @@ export const Sidebar = () => {
         <>
             <div className="sidebar">
                 <div className="sidebar-header">
-                    <img src="https://i.postimg.cc/SxW40T7w/Vidhyabhim-logo.jpg" alt="logo" className="logo" />
-                    <span>Vidhya Bhim Institute</span>
+                   <Link to= '/'>  
+                   <img src="https://i.postimg.cc/SxW40T7w/Vidhyabhim-logo.jpg" alt="logo" className="logo" />
+                   
+                   </Link>
+                    <Link to='/' style={{color : 'white'}}>Vidhya Bhim Institute</Link>
                 </div>
 
                 <nav className="menu">
@@ -75,6 +79,7 @@ export const Sidebar = () => {
                     ))}
                 </nav>
             </div>
+          
         </>
     )
 }

@@ -1,85 +1,50 @@
 import { useState } from "react";
 
-export const NewStudent = () =>{
-  
-  const [formData, setFormData] = useState({
-    batch: "",
-    batchTime: "",
-    stream: "",
-    enrolmentNumber: "",
-    course: "",
-    admissionNumber: "",
-    semester: "",
-    admissionDate: "",
-    session: "",
-    studentName: "",
-    gender: "",
-    nationality: "",
-    caste: "",
-    religion: "",
-    maritalStatus: "",
-    bloodGroup: "",
-    email: "",
-    dob: "",
-    address: "",
-    pinCode: "",
-    phone: "",
-    aadharCard: "",
-    fatherName: "",
-    fatherPhone: "",
-    motherName: "",
-    motherPhone: "",
-    password: "",
-    status: "Active",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-  // const handleFileChange = (e) => {
-  //   const { name, files } = e.target;
-  //   setFormData({ ...formData, documents: { ...formData.documents, [name]: files[0] } });
-  // };
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-  return (
-    <>
-    <div id="main-box"> 
-    <div className="content-wrapper">
-      <div style={{backgroundColor : 'yellow'}}> <h2 className="form-title">Add New Student</h2> </div>
+export const UploadData = () =>{
+    const [formData, setFormData] = useState({
+        batch: "",
+        batchTime: "",
+        stream: "",
+        enrolmentNumber: "",
+        course: "",
+        admissionNumber: "",
+        semester: "",
+        admissionDate: "",
+        session: "",
+        studentName: "",
+        gender: "",
+        nationality: "",
+        caste: "",
+        religion: "",
+        maritalStatus: "",
+        bloodGroup: "",
+        email: "",
+        dob: "",
+        address: "",
+        pinCode: "",
+        phone: "",
+        aadharCard: "",
+        fatherName: "",
+        fatherPhone: "",
+        motherName: "",
+        motherPhone: "",
+        password: "",
+        status: "Active",
+      });
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      }; 
+     const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData);
+      };
+    return (
+        <>
+        <div>
+        <div className="content-wrapper">
+          <div style={{backgroundColor : 'skyBlue'}}> <h2 className="form-title">Upload Student </h2> </div>
       <form onSubmit={handleSubmit} className="student-form">
-        <div style={{display: 'flex'}}>
-        <div className="form-group">
-          <label>Select Batch:</label>
-          <select name="batch" onChange={handleChange} value={formData.batch}>
-            <option>Select Batch</option>
-            <option>Batch 1</option>
-            <option>Batch 2</option>
-          </select>
-        </div>
-        {/* select Stream  */}
-        <div className="form-group">
-          <label>Select Stream :</label>
-          <select name="batch" onChange={handleChange} value={formData.stream}>
-            <option>Select Stream </option>
-            <option>Batch 1</option>
-            <option>Batch 2</option>
-          </select>
-        </div>
-        {/* select Course  */}
-        <div className="form-group">
-          <label>Select Course :</label>
-          <select name="batch" onChange={handleChange} value={formData.course}>
-            <option>Select Course </option>
-            <option>Batch 1</option>
-            <option>Batch 2</option>
-          </select>
-        </div>
-        </div>
+       
         {/* ...... */}
         <div id="form-input">
         <div className="form-group">
@@ -145,16 +110,12 @@ export const NewStudent = () =>{
         </div>
         <div>  
           <h2> Upload Students </h2>
-
+          
         </div>
        
       </form>
-    </div>
-   {/* ........................................Upload Students .............................................. */}
-  
-    </div>
-    </>
-  );
-};
-
-
+        </div>
+        </div>
+        </>
+    )
+}
