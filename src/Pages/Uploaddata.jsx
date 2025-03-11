@@ -2,28 +2,6 @@ import { useState } from "react";
 
 export const UploadData = () =>{
     const [formData, setFormData] = useState({
-        batch: "",
-        batchTime: "",
-        stream: "",
-        enrolmentNumber: "",
-        course: "",
-        admissionNumber: "",
-        semester: "",
-        admissionDate: "",
-        session: "",
-        studentName: "",
-        gender: "",
-        nationality: "",
-        caste: "",
-        religion: "",
-        maritalStatus: "",
-        bloodGroup: "",
-        email: "",
-        dob: "",
-        address: "",
-        pinCode: "",
-        phone: "",
-        aadharCard: "",
         fatherName: "",
         fatherPhone: "",
         motherName: "",
@@ -34,6 +12,9 @@ export const UploadData = () =>{
       const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       }; 
+      const handleFileChange = () =>{
+
+      }
      const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
@@ -48,64 +29,57 @@ export const UploadData = () =>{
         {/* ...... */}
         <div id="form-input">
         <div className="form-group">
-          <label>Enrolment Number:</label>
-          <input type="text" name="enrolmentNumber" onChange={handleChange} value={formData.enrolmentNumber} />
+          <label>Father Name :</label>
+          <input type="text" name="fathername" onChange={handleChange} value={formData.fatherName} />
         </div>
         <div className="form-group">
-          <label>Student Name:</label>
-          <input type="text" name="studentName" onChange={handleChange} value={formData.studentName} />
+          <label>Father Phone Nu :</label>
+          <input type="text" name="FatherPhone" onChange={handleChange} value={formData.fatherPhone} />
         </div>
         <div className="form-group">
-          <label>Email ID:</label>
-          <input type="email" name="email" onChange={handleChange} value={formData.email} />
+          <label>Mother Name:</label>
+          <input type="text" name="motherName" onChange={handleChange} value={formData.motherName} />
         </div>
         <div className="form-group">
-          <label>Phone:</label>
-          <input type="text" name="phone" onChange={handleChange} value={formData.phone} />
+          <label>Mother Phone:</label>
+          <input type="text" name="Motherphone" onChange={handleChange} value={formData.motherPhone} />
         </div>
         <div className="form-group">
-          <label>admissionNumber:</label>
-          <input type="text" name="admissionNumber" onChange={handleChange} value={formData.admissionNumber} />
+          <label>Upload Candidate Photo : </label>
+        {/* <input type="text" name="aadharCard" onChange={handleChange} value={formData.aadharCard} /> */}
+        <input type="file" name="photo" onChange={handleFileChange} />
+           
+        </div>
+
+        <div className="form-group">
+          <label>Upload Candidate Sign  : </label>
+        {/* <input type="text" name="aadharCard" onChange={handleChange} value={formData.aadharCard} /> */}
+        <input type="file" name="photo" onChange={handleFileChange} />
+           
         </div>
         <div className="form-group">
-          <label>session:</label>
-          <input type="text" name="session" onChange={handleChange} value={formData.session} />
+          <label>Upload Document 1: </label>
+        {/* <input type="text" name="aadharCard" onChange={handleChange} value={formData.aadharCard} /> */}
+        <input type="file" name="photo" onChange={handleFileChange} />
+           
         </div>
         <div className="form-group">
-          <label>nationality:</label>
-          <input type="text" name="nationality" onChange={handleChange} value={formData.nationality} />
+          <label>Upload Document 2 : </label>
+        {/* <input type="text" name="aadharCard" onChange={handleChange} value={formData.aadharCard} /> */}
+        <input type="file" name="photo" onChange={handleFileChange} />
+           
         </div>
         <div className="form-group">
-          <label>Caste:</label>
-          <input type="text" name="Caste" onChange={handleChange} value={formData.caste} />
+          <label>Upload Document 3: </label>
+        {/* <input type="text" name="aadharCard" onChange={handleChange} value={formData.aadharCard} /> */}
+        <input type="file" name="photo" onChange={handleFileChange} />
+           
         </div>
         <div className="form-group">
-          <label>religion:</label>
-          <input type="text" name="religion" onChange={handleChange} value={formData.religion} />
-        </div>
-        <div className="form-group">
-          <label>maritial Status:</label>
-          <input type="text" name="maritialstatus" onChange={handleChange} value={formData.maritialstatus} />
-        </div>
-        <div className="form-group">
-          <label>bloodGroup:</label>
-          <input type="text" name="bloodGroup" onChange={handleChange} value={formData.bloodGroup} />
-        </div>
-        <div className="form-group">
-          <label>DOB:</label>
-          <input type="text" name="DOB" onChange={handleChange} value={formData.dob} />
-        </div>
-        <div className="form-group">
-          <label>address:</label>
-          <input type="text" name="address" onChange={handleChange} value={formData.address} />
-        </div>
-        <div className="form-group">
-          <label>pinCode:</label>
-          <input type="text" name="pinCode" onChange={handleChange} value={formData.pinCode} />
-        </div>
-        <div className="form-group">
-          <label>aadharCard:</label>
-          <input type="text" name="aadharCard" onChange={handleChange} value={formData.aadharCard} />
+          <label>Upload Document 4 : </label>
+        {/* <input type="text" name="aadharCard" onChange={handleChange} value={formData.aadharCard} /> */}
+        <input type="file" name="photo" onChange={handleFileChange} />
+           
         </div>
         </div>
         <div>  

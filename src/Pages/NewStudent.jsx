@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { UploadData } from "./Uploaddata";
 
 export const NewStudent = () =>{
   
@@ -151,7 +152,7 @@ export const NewStudent = () =>{
       </form>
     </div>
    {/* ........................................Upload Students .............................................. */}
-  
+      <UploadData />
     </div>
     </>
   );
