@@ -49,8 +49,8 @@ export const NewStudent = () =>{
   };
   return (
     <>
-    <div id="main-box"> 
-    <div className="content-wrapper">
+    {/* <div id="main-box">  */}
+    {/* <div className="content-wrapper">
       <div style={{backgroundColor : 'yellow'}}> <h2 className="form-title">Add New Student</h2> </div>
       <form onSubmit={handleSubmit} className="student-form">
         <div style={{display: 'flex'}}>
@@ -62,7 +62,7 @@ export const NewStudent = () =>{
             <option>Batch 2</option>
           </select>
         </div>
-        {/* select Stream  */}
+        select Stream 
         <div className="form-group">
           <label>Select Stream :</label>
           <select name="batch" onChange={handleChange} value={formData.stream}>
@@ -71,7 +71,7 @@ export const NewStudent = () =>{
             <option>Batch 2</option>
           </select>
         </div>
-        {/* select Course  */}
+        select Course 
         <div className="form-group">
           <label>Select Course :</label>
           <select name="batch" onChange={handleChange} value={formData.course}>
@@ -81,7 +81,6 @@ export const NewStudent = () =>{
           </select>
         </div>
         </div>
-        {/* ...... */}
         <div id="form-input">
         <div className="form-group">
           <label>Enrolment Number:</label>
@@ -150,10 +149,11 @@ export const NewStudent = () =>{
         </div>
        
       </form>
-    </div>
+    </div> */}
    {/* ........................................Upload Students .............................................. */}
-      <UploadData />
-    </div>
+      <UploadData 
+      />
+    {/* </div> */}
     </>
   );
 };
