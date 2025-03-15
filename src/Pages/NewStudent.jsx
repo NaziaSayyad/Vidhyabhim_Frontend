@@ -1,7 +1,4 @@
-import { useState } from "react";
-import { UploadData } from "./Uploaddata";
-
-export const NewStudent = () =>{
+import { useState } from "react";export const NewStudent = () =>{
   
   const [formData, setFormData] = useState({
     batch: "",
@@ -151,8 +148,8 @@ export const NewStudent = () =>{
       </form>
     </div> */}
    {/* ........................................Upload Students .............................................. */}
-      <UploadData 
-      />
+      {/* <UploadData 
+      /> */}
     {/* </div> */}
     </>
   );

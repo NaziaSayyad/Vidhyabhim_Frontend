@@ -1,16 +1,17 @@
 #dashboard-cards {
     display: flex;
-    gap: 15px;
+    gap: 5%;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
-    /* margin-left: 1% */
+    margin-left: 5%
     /* margin: auto; */
   }
   
   .card {
     flex: 1;
-    min-width: 200px;
+    /* min-width: 200px; */
+    width: 200px;
     padding: 20px;
     border-radius: 8px;
     color: white;
@@ -28,6 +29,19 @@
     font-size: 16px;
     margin: 5px 0 0;
   }
+  /* Container */
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+
+}
+.container >div{
+  margin-left: 2%;
+  /* width: ; */
+}
+
+
   
   /* Responsive Design */
   @media (max-width: 768px) {
