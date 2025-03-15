@@ -1,0 +1,128 @@
+/* Container */
+.table-container {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Table Styling */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.student-table thead {
+    background: #007bff;
+    color: white;
+}
+
+.student-table th, .student-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.student-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Student Photo */
+.student-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 8px 12px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagination a:hover {
+    background: #007bff;
+    color: white;
+}
+
+.active a {
+    background: #0056b3;
+    color: white;
+    border: 1px solid #0056b3;
+}
+
+.prev-button, .next-button {
+    font-weight: bold;
+}
+
+.disabled a {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Loader */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #007bff;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .student-table th, .student-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .pagination a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}

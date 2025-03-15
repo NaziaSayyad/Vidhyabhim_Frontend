@@ -45,14 +45,16 @@
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    .dashboard-cards {
+    #dashboard-cards {
       flex-direction: column;
       align-items: center;
+      
     }
   
     .card {
       width: 100%;
       max-width: 300px;
+      margin-top: 5%;
     }
   }
   
