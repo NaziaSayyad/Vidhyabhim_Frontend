@@ -5,6 +5,8 @@ import AddStudent from "../Pages/AddStudent"
 import { MarksheetPage } from "../Pages/Marksheet"
 import MarksheetData from "../Components/MarksheetData"
 import CertificateInput from "../Components/CertificateInput"
+import { DisplaySubjects } from "../Pages/DisplaySubjects"
+import { AddSubjects } from "../Pages/AddSubjects"
 
 
 export const AllRoutes =() =>{
@@ -17,6 +19,8 @@ export const AllRoutes =() =>{
         <Route path='/marksheetdata' element={<MarksheetPage />} />
         <Route path="/view-marksheet" element={<MarksheetData />} />
         <Route path="/certificate" element={<CertificateInput />} />
+        <Route path= "view-subjects" element = {<DisplaySubjects />} />
+      <Route path="add-subject" element ={<AddSubjects />} />
       </Routes>
         </>
     )

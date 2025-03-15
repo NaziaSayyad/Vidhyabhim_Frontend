@@ -12,14 +12,6 @@ export const getstudents = () => async(dispatch) =>{
         
     }
 }
-// export const poststudents = () => async(dispatch) =>{
-//         try{
-//             let res = await axios.post(``);
-//             return dispatch({type : POST_STUDENT, payload : res.data});
-//         }catch(err){
-//             console.log("error in adding",err);
-//         }
-// }
 
 // ✅ Add Student Action
 export const addStudent = (studentData) => async (dispatch) => {
