@@ -1,4 +1,4 @@
-import { GET_SUBJECTS } from "./actiontypes"
+import { GET_SUBJECTS, POST_SUBJECTS } from "./actiontypes"
 
 const intialstate ={
     subjects: []
@@ -9,6 +9,12 @@ export const SubjectReducer = (state = intialstate,{type,payload}) =>{
             return{
                 ...state,
                 subjects :payload
+            }
+        }
+        case POST_SUBJECTS :{
+            return {
+                ...state,
+                subjects: [...state.subjects,payload]
             }
         }
         default :{

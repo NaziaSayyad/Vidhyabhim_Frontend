@@ -7,7 +7,7 @@ import ReactPaginate from "react-paginate";
 
 
 export const Student = () =>{
-    const students = useSelector((store) => store.student.students);
+    const students = useSelector((store) => store.student.students) || [];
     const dispatch = useDispatch();
 
        // Pagination state
@@ -17,7 +17,6 @@ export const Student = () =>{
        const currentStudents = students.slice(offset, offset + studentsPerPage);
        const pageCount = Math.ceil(students.length / studentsPerPage);
 
-       
 console.log("data",students)
 const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);

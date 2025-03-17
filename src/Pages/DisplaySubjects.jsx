@@ -4,12 +4,14 @@ import { getsubjects } from "../Redux/Subjects/action";
 import { Loading } from "../Components/Loading";
 
 export const DisplaySubjects = () =>{
-    const subjects = useSelector((store) => store.subjects);
+    const subjects = useSelector((store) => store.subject.subjects);
     const dispatch = useDispatch();
    
 
-    console.log(subjects,"subjects");
-    
+        console.log("Subjects Data Type:", typeof subjects);
+        console.log("Subjects Data:", subjects);
+
+       
     useEffect(() =>{
         dispatch(getsubjects())
     },[dispatch])
@@ -24,30 +26,23 @@ export const DisplaySubjects = () =>{
                     <thead>
                          <tr>
                             <th>Sr.</th>
-                            <th>Student Photo</th>
-                            <th>Student Name</th>
-                            <th>Enroll No.</th>
-                            <th>Father Name</th>
                             <th>Stream Name</th>
-                            <th>Course Name</th>
+                            <th>Course  Name</th>
                             <th>Smester Name</th>
+                            <th> Status </th>
                         </tr>
                     </thead>
                     <tbody>
-                        {/* {students.map((student, index) => (
-                            <tr key={student._id}>
+                        {subjects.map((el, index) => (
+                            <tr key={el._id}>
                                 <td>{index + 1}</td>
-                                <td>
-                                    <img src={student.photo} alt="Student" className="student-photo" />
-                                </td>
-                                <td>{student.studentname}</td>
-                                <td>{student.enrol}</td>
-                                <td>{student.fname}</td>
-                                <td>{student.streamname}</td>
-                                <td>{student.coursename}</td>
-                                <td>{student.semester}</td>
+                               
+                                <td>{el.streamname}</td>
+                                <td>{el.coursename}</td>
+                                <td>{el.semester}</td>
+                                <td style={{backgroundColor : 'green',color :'white'}}> {el.status} </td>
                             </tr>
-                        ))} */}
+                        ))}
                     </tbody>
                 </table>
             )}
