@@ -16,14 +16,14 @@ export const addsubjects = (subjectdata) => async (dispatch) =>{
             for (let key in subjectdata) {
                 formData.append(key, subjectdata[key]);
             }
-            console.log("Sending data:", Object.fromEntries(formData.entries()));
     
-            const response = await axios.post("http://localhost:8080/add-suject", formData, {
+            const response = await axios.post("http://localhost:8080/add-subject", formData, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
             console.log(response,"response");
             
-            dispatch({ type: POST_SUBJECTS, payload: response.data });
+            dispatch({ type: POST_SUBJECTS, payload: response.data});
+            return response.data.message || "Subjects added successfully!"; 
         } catch (error) {
             console.log(error);
             

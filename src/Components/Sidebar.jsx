@@ -11,21 +11,21 @@ const menuItems = [
                 { name: "Add Student", path: "/addstudent" },
                 { name: "View Students", path: "/allstudent" }]
     },
-    {
-        label: "Courses", subItems: [
-            { name: "Add Course", path: "/add-course" },
-            { name: "View Courses", path: "/view-courses" }]
-    },
+    // {
+    //     label: "Courses", subItems: [
+    //         { name: "Add Course", path: "/add-course" },
+    //         { name: "View Courses", path: "/view-courses" }]
+    // },
     {
         label: "Subjects", subItems:
             [{ name: "Add Subject", path: "/add-subject" },
             { name: "View Subjects", path: "/view-subjects" }]
     },
-    {
-        label: "Batches", subItems:
-            [{ name: "Add Batch", path: "/add-batch" },
-            { name: "View Batches", path: "/view-batches" }]
-    },
+    // {
+    //     label: "Batches", subItems:
+    //         [{ name: "Add Batch", path: "/add-batch" },
+    //         { name: "View Batches", path: "/view-batches" }]
+    // },
     {
         label: "Marksheet", subItems:
             [

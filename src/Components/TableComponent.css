@@ -1,0 +1,23 @@
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.student-table thead {
+    background: #007bff;
+    color: white;
+}
+
+.student-table th, .student-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.student-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}

@@ -57,8 +57,9 @@ const handlekeypress = (event) =>{
   }, [id]);
    
     return (
-        <>
-       <div id="marksheet">
+      
+        <div>
+       <div className="marksheet">
        <div id='input_box'> 
             <input  
               placeholder="Type your Id"  
@@ -66,15 +67,15 @@ const handlekeypress = (event) =>{
              onChange={(e) => setinput(e.target.value)}
              onKeyDown={handlekeypress}
             /> 
-              <button
+              <button className="btn-btn"
               type="submit"
               onClick={handleSubmit}            
               >  Submit  </button>
           </div>
         <Marksheet data = {data} />
        </div>
-        
-        </>
+         </div>
+       
     )
 
 }

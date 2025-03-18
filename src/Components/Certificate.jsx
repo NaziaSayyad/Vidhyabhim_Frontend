@@ -66,7 +66,7 @@ function Certificate({ id }) {
           {/* ................... Course Name Div .............. */}
           
           <div>
-            <p id="Course_P"> {data?.batchname} </p>
+            <p id="Course_P"> {data?.coursename} </p>
           </div>
           {/* ...................Name Div........................... */}
           

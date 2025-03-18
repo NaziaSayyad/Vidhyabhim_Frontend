@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Certificate from "./Certificate";
-
+import "./certificate.css";
 function CertificateInput() {
  
   const [id,setid] = useState();
@@ -29,7 +29,7 @@ const handlekeypress = (event) =>{
              onChange={(e) => setinput(e.target.value)}
              onKeyDown={handlekeypress}
             /> 
-              <button
+              <button className="btn-btn"
               type="submit"
               onClick={handleSubmit}            
               >  Submit  </button>

@@ -1,0 +1,130 @@
+/* Main Form Container */
+.student-form {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title */
+.student-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Student Details Section */
+.student-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+/* Input fields for student details */
+.student-details input {
+    flex: 1;
+    min-width: 45%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Subject Row Layout */
+.subject-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Subject Input Fields */
+.subject-row input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #e5e7eb; /* Light gray background */
+    font-size: 14px;
+}
+
+/* Add Student Div */
+.add-student-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+    margin: 4%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields inside Add Student Div */
+.add-student-div > div > input {
+    margin: 2%;
+}
+
+/* Submit Button */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+
+/* Medium screens (Tablets) */
+@media (max-width: 768px) {
+    .subject-row {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns instead of 5 */
+    }
+
+    .add-student-div {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    }
+
+    .student-details input {
+        min-width: 100%;
+    }
+}
+
+/* Small screens (Phones) */
+@media (max-width: 480px) {
+    .student-details {
+        flex-direction: column;
+    }
+
+    .student-details input {
+        width: 100%; /* Full width inputs */
+    }
+
+    .subject-row {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns layout for subjects */
+    }
+
+    .add-student-div {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .subject-row input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

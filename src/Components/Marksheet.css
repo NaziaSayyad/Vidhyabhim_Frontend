@@ -1,11 +1,17 @@
-#marksheet{
+.marksheet{
     width: 90%;
     text-align: center;
-    border: 20px solid brown;
+    border: 20px solid blue;
     max-width: 800px;
     align-items: center;
     margin: 1%;
-    /* margin-left: 15%; */
+}
+#watermark{
+    position: absolute;
+    bottom: 10px; /* Adjust position */
+    right: 10px; /* Adjust position */
+    width: 50px; /* Adjust size */
+    opacity: 0.3; /* Make it faint */
 }
 
 #batch_1stdiv{

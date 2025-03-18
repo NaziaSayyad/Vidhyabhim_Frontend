@@ -1,13 +1,9 @@
 import MarksheetTable from "./MarksheetTables";
 import "./Marksheet.css";
 function Marksheet ( {data }){
-
-    console.log(data,"DATA");
-    
     return(
-        <>
         <div>
-        <div id= "batch_1stdiv"> 
+        <div id= "batch_1stdiv" > 
             <div>
                  <p> Batch No.</p>
                  <p> {data?.BatchNo} </p>
@@ -17,7 +13,6 @@ function Marksheet ( {data }){
                 <p>{data?.enroll} </p>
             </div>
             <div> 
-                {/* <p> Empty   </p> */}
              </div>
             <div> 
                 <p> Session</p>  
@@ -41,7 +36,6 @@ function Marksheet ( {data }){
         </div>
          <MarksheetTable data = {data?.course} date = {data?.DATE}  />
         </div>
-        </>
     )
 }
 export default Marksheet;

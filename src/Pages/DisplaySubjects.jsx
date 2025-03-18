@@ -17,7 +17,7 @@ export const DisplaySubjects = () =>{
     },[dispatch])
     return (
         <>
-        <h1> Display all Subjects </h1>
+        <h1 style={{margin :'5%'}}> Display all Subjects </h1>
         <div className="table-container">
             {subjects.length === 0 ? (
                <div> <Loading /> </div>
@@ -37,9 +37,9 @@ export const DisplaySubjects = () =>{
                             <tr key={el._id}>
                                 <td>{index + 1}</td>
                                
-                                <td>{el.streamname}</td>
-                                <td>{el.coursename}</td>
-                                <td>{el.semester}</td>
+                                <td>{el?.streamname}</td>
+                                <td>{el?.coursename}</td>
+                                <td>{el?.semester}</td>
                                 <td style={{backgroundColor : 'green',color :'white'}}> {el.status} </td>
                             </tr>
                         ))}
