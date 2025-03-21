@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Certificate from "./Certificate";
 import "./certificate.css";
+import MarksheetQRCode from "./Qrcode";
 function CertificateInput() {
  
   const [id,setid] = useState();
@@ -34,6 +35,8 @@ const handlekeypress = (event) =>{
               onClick={handleSubmit}            
               >  Submit  </button>
           </div>
+          <MarksheetQRCode studentId={id}/>
+         
           <Certificate id={id} />
           {/* <Certifica  id={id} />  */}
      </div>

@@ -4,17 +4,14 @@ import { addsubjects, getsubjects } from "../Redux/Subjects/action";
 import "./AddSubject.css";
 
 export const AddSubjects = () =>{
-   const msg  = useSelector((store) => store.subject.subjects[0].message);
-      console.log(msg,"Finaldata");
      
       const dispatch = useDispatch();
     const [formData,setFormData] = useState({
-        
-            fname: "",
+            streamname: "",
             semester: "",
-           session:  "",
+            session:  "",
             course: [
-              {
+                {
                 papercode: "101",
                 subject: "MLT",
                 MAX : "100",
@@ -76,8 +73,10 @@ export const AddSubjects = () =>{
     const handleSubmit = async (e) => {
         e.preventDefault();
       const message = await dispatch(addsubjects(formData))
-      console.log(message, "msg");
-      alert(message)
+    //   console.log(message, "msg");
+     if(message !== "undefined"){
+        alert(message)
+     }
       };
 useEffect(() =>{
     console.log(formData,"final");

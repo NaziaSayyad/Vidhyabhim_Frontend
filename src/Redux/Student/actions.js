@@ -18,7 +18,11 @@ export const addStudent = (studentData) => async (dispatch) => {
     try {
         const formData = new FormData();
         for (let key in studentData) {
-            formData.append(key, studentData[key]);
+            if (studentData[key] instanceof File) {
+                formData.append(key, studentData[key]); // Append files directly
+            } else {
+                formData.append(key, studentData[key]); // Append text fields
+            }
         }
         console.log("Sending data:", Object.fromEntries(formData.entries()));
 
@@ -27,13 +31,23 @@ export const addStudent = (studentData) => async (dispatch) => {
         });
         console.log(response,"response");
         
+
+        if (response.status === 200 || response.status === 201) {
+            alert("✅ Student added successfully!");
+        }
+
         dispatch({ type: POST_STUDENT, payload: response.data });
+
     } catch (error) {
-        console.log(error);
-        
-       console.error("❌ Error adding student:", error.response?.data || error.message);
-       if(error.response.data.message === 'Student already exists.'){
-        alert("Student Already Exist")
-       }
+        console.error("❌ Error adding student:", error.response?.data || error.message);
+
+    // Check if error.response exists and has a message
+    if (error.response && error.response.data?.message === 'Student already exists.') {
+        // alert("⚠️ Student Already Exists!");
+        console.log(error.response.data?.email , "email");
+        console.log(error.response.data?.phone, "phone");
+    } else {
+        alert("❌ Error adding student!  Please try again.", error.response.data?.message || error.message);
+        }
     }
-};
+}
