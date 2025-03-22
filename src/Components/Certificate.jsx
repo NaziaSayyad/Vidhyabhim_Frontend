@@ -3,8 +3,11 @@
 import { useEffect, useState } from "react";
 import "./certificate.css";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
-function Certificate({ id }) {
+function Certificate() {
+  const {id} = useParams();
+
   const [data, setdata] = useState([]);
   const API = `https://vidhyabhim-backend.onrender.com/students/${id}`;
 

@@ -9,7 +9,9 @@ const menuItems = [
         label: "Student", subItems:
             [
                 { name: "Add Student", path: "/addstudent" },
-                { name: "View Students", path: "/allstudent" }]
+                { name: "View Students", path: "/allstudent" },
+                {name : "Student Login" , path : "/login"}
+            ]
     },
     // {
     //     label: "Courses", subItems: [
@@ -50,11 +52,11 @@ export const Sidebar = () => {
         <>
             <div className="sidebar">
                 <div className="sidebar-header">
-                   <Link to= '/'>  
+                   <Link to= '/dashboard'>  
                    <img src="https://i.postimg.cc/SxW40T7w/Vidhyabhim-logo.jpg" alt="logo" className="logo" />
                    
                    </Link>
-                    <Link to='/' style={{color : 'white'}}>Vidhya Bhim Institute</Link>
+                    <Link to='/dashboard' style={{color : 'white'}}>Vidhya Bhim Institute</Link>
                 </div>
 
                 <nav className="menu">

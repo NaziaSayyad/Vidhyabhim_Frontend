@@ -4,46 +4,49 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function MarkPage (){
+
+export const FinalMarksheet = () =>{
     const {id} = useParams();
     
-      const [data, setdata] = useState([]);
-      const API = `https://vidhyabhim-backend.onrender.com/marksheet/${id}`;
-      const getdata = async () => {
-        try {
-          const response = await axios.get(API);
-        //   return response.data
-        if(response.data === ""){
-            alert ("No Student found")
-        }
-        else{
-            return response.data
-        }
-        //   console.log(response);
-    
-        }
-        catch (error) {
-          const message = error.response;
-          console.log(message);
-        //   alert(message)
-        }
-    
+    const [data, setdata] = useState([]);
+    const API = `https://vidhyabhim-backend.onrender.com/marksheet/${id}`;
+    const getdata = async () => {
+      try {
+        const response = await axios.get(API);
+      //   return response.data
+      if(response.data === ""){
+          alert ("No Student found")
       }
-      const fetch_data = async () => {
-        const dt = await getdata();
-        setdata(dt)
-        console.log(dt, "data from fetch func ");
-    
-      }   
-        
-        useEffect(() => {
-        console.log("Component Mounted");
-        if (id !== undefined) {
-          fetch_data()
-        }
-      }, [id]);   
-    return(
-        <div>
+      else{
+          return response.data
+      }
+      //   console.log(response);
+  
+      }
+      catch (error) {
+        const message = error.response;
+        console.log(message);
+      //   alert(message)
+      }
+  
+    }
+    const fetch_data = async () => {
+      const dt = await getdata();
+      setdata(dt)
+      console.log(dt, "data from fetch func ");
+  
+    }   
+      
+      useEffect(() => {
+      console.log("Component Mounted");
+      if (id !== undefined) {
+        fetch_data()
+      }
+    }, [id]);   
+  
+    return (
+        <>
+       <div>
         <div id= "batch_1stdiv" > 
             <div>
                  <p> Batch No.</p>
@@ -77,7 +80,6 @@ function MarkPage (){
         </div>
          <MarksheetTable data = {data?.course} date = {data?.DATE}  />
         </div>
+        </>
     )
 }
-export default MarkPage;
-

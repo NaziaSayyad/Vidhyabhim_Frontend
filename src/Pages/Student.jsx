@@ -4,6 +4,7 @@ import { getstudents } from "../Redux/Student/actions";
 import "./student.css";
 import { Loading } from "../Components/Loading";
 import ReactPaginate from "react-paginate";
+import { Link } from "react-router-dom";
 
 
 export const Student = () =>{
@@ -56,6 +57,7 @@ const handlePageClick = ({ selected }) => {
                                 <td>{student.streamname}</td>
                                 <td>{student.coursename}</td>
                                 <td>{student.semester}</td>
+                                <td>  <Link to = {`/details/${student.id}`}>  View </Link></td>
                             </tr>
                         ))}
                     </tbody>
